@@ -1,0 +1,509 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+}
+header h1{
+  font-family: "Integral CF Regular";
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 100px;
+}
+.bold{
+  font-family: "Integral CF Regular";
+}
+.head{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding-top: 70px; 
+  padding-bottom: 15px; 
+}
+.head a{
+  text-decoration: none;
+  color: #000;
+}
+.head ul{
+  display: flex;
+  gap: 10px;
+  min-width: 400px;
+  font-size: 1.2rem;
+}
+.head li{
+  list-style-type: none;
+}
+.second-logo{
+  display: none;
+}
+.search-div{
+  background-color: #F0F0F0;
+  border-radius: 30px;
+  display:flex ;
+  align-items: center;
+  padding: 15px 5px 15px 20px;
+  gap: 5px;
+  width: 40%;
+}
+.search-div img{
+  width: 20px;
+  height: 20px;
+}
+.search{
+  border-radius: 30px;
+  background-color: #F0F0F0;
+  border: 0;
+  width: 100%;
+  text-align: start;
+  font-size: 18px;
+}
+.search:focus{
+  outline: none;
+}
+
+.section-1{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #F0F0F0;
+}
+.section-1 button{
+  background-color: #000;
+  align-self: flex-start;
+  color: #fff;
+  padding: 20px 85px 20px 85px;
+  border-radius: 30px;
+}
+.section-1 p{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2vw;
+}
+.section-1 h1{
+  /* min-width: 600px; */
+  font-size: 5vw;
+  font-family: "Integral CF Regular";
+  
+}
+
+.cart .cart-item-div:last-child hr{
+  display: none;
+}
+.cart-item{
+  padding: 10px;
+}
+.group{
+  display: flex; 
+  flex-direction:column;
+  margin-left: 50px; 
+  margin-top: 100px;
+  gap:20px;
+  width: 50%;
+}
+.group-img{
+  width: 100%;
+  /* height: auto ; */
+}
+.analysis{
+  width: 80%;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+.item-bg{
+  background-color: #F0EEED;
+  width: fit-content;
+  border-radius: 30px;
+}
+.item-bg img{
+  width: 350px;
+  border-radius: 30px;
+}
+h4{
+  font-size: 30px;
+}
+.section-4{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 100px;
+  /* justify-content: space-between; */
+  /* width: 100%; */
+  background-color: #F0F0F0;
+  border-radius: 80px;
+  margin: 100px;
+
+}
+.section-4 img{
+  /* width: 80%; */
+  height: 350px;
+  /* border-radius: 80px; */
+}
+.testimonial{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  width: 30%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 30px 30px 60px 30px;
+}
+.testimonial h3{
+  font-size: 30px;
+  color: #000;
+}
+
+.testimonial p{
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.email-subscription{
+  display: flex;
+  align-items: center;
+  padding: 45px 90px 45px 90px;
+  background-color: #000;
+  border-radius: 20px;
+  justify-content: space-between;
+  position: relative;
+  top: -7rem;
+}
+.email-subscription input{
+  border: 0;
+  font-size: 20px;
+}
+.email-sub-div{
+    display:"flex";
+    gap: 5px; 
+    align-items: baseline;
+    /* justify-content: end; */
+    flex-direction: column;
+    background-color:#fff; 
+    border-radius: 70px;
+    padding:15px;
+    width:450px;
+}
+.email-input{
+  width: 80%;
+}
+.email-input:focus{
+  outline: none;
+  
+}
+.email-subscription .btn{
+  border-radius: 30px;
+  background-color: #fff;
+  margin-top: 15px;
+  width: 450px;
+  padding: 15px;
+  font-weight: 700;
+}
+.foot{
+  background-color: #F0F0F0;
+  margin-top: 11rem;
+  padding: 0 4% 4% 4%;
+}
+.foot a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+}
+.foot h2{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.inside-foot{
+  display: flex;
+  justify-content: space-between;
+  /* width: 500px; */
+  gap: 20px;
+}
+/* General Carousel Styles */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for better aesthetics */
+}
+
+/* Carousel button styles */
+.carousel-button {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Left and right positioning */
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+.last-div{
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center;
+}
+.last-div p{
+  color: rgba(0, 0, 0, 0.5);
+}
+.foot-details-div{
+  display:flex;
+  width:50%;  
+  gap: 20%;
+  /* justify-content:space-between; */
+}
+.itemNumber{
+  display: flex;
+  background-color: #f0f0f0;
+  width: fit-content;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  /* font-size: 2vw; */
+}
+.itemNumber button{
+  border: 0;
+  background-color: transparent;
+}
+.cart{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  width: fit-content;
+}
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+}
+.cart-shirt-div{
+  width:20%;
+  background: #F0F0F0;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.cart-shirt{
+  width: 100%;
+}
+hr{
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 1px;
+}
+.itemNumberDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+/* Hide buttons on larger screens */
+@media (min-width: 768px) {
+  .carousel-button {
+    display: none;
+  }
+}
+
+@media (max-width: 1168px) {
+  .email-subscription {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px 
+
+  }
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+/* General Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.head ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.header-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.search-div {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+
+.sidebar li {
+  cursor: pointer;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: none;
+  }
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  header h1 {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .inside-foot{
+    flex-direction: column;
+  }
+  .head ul {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-div {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .section-1{
+    flex-direction: column;
+    align-items: center;
+  }
+  .foot-details-div{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .carousel {
+    gap: 10px;
+  }
+  .email-subscription{
+    /* align-items: center; */
+    top: -11rem;
+    padding: 20px;
+  }
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .email-sub-div{
+    width: 400px;
+  }
+  .email-subscription .btn{
+    width: 400px;
+  }
+  .head {
+    display: none; /* Hide default header on mobile */
+  }
+
+  .menu-btn {
+    display: block;
+  }
+  .last-div{
+    flex-direction: column;
+    align-items: center;
+  }
+  .second-logo{
+    display: block;
+  }
+
+}
