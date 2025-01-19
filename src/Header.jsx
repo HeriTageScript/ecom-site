@@ -17,7 +17,7 @@ const Header = () => {
       <button className="menu-btn" onClick={toggleSidebar}>
         ☰
       </button>
-      <Link to='/'><h1 className='second-logo'>SHOP.CO</h1></Link>
+      <Link className='second-logo' to='/'><h1 >SHOP.CO</h1></Link>
 
 
       {/* Sidebar */}
