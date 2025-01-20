@@ -13,7 +13,7 @@ const Footer = () => {
     return ( 
         <div className='foot'>
             <div className="email-subscription">
-                <h1 className='bold' style={{color:"#fff", fontSize:"50px", maxWidth:"700px"}}>STAY UP TO DATE ABOUT  OUR LATEST OFFERS</h1>
+                <h1 className='bold' style={{color:"#fff", fontSize:"40px", maxWidth:"700px"}}>STAY UP TO DATE ABOUT  OUR LATEST OFFERS</h1>
                 <form action="">
                     <div className='email-sub-div' >
                         <img src={email} alt="" />

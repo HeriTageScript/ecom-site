@@ -34,6 +34,7 @@ header h1{
 }
 .second-logo{
   display: none;
+  text-align: center;
 }
 .search-div{
   background-color: #F0F0F0;
@@ -97,6 +98,7 @@ header h1{
   margin-top: 100px;
   gap:20px;
   width: 50%;
+  
 }
 .group-img{
   width: 100%;
@@ -109,11 +111,15 @@ header h1{
 }
 .item-bg{
   background-color: #F0EEED;
-  width: fit-content;
+  width: 40vw;
+  height: 40vh;
+  max-width: 300px;
+  max-height: 160px;
   border-radius: 30px;
 }
 .item-bg img{
-  width: 350px;
+  width: 100%;
+  height: 100%;
   border-radius: 30px;
 }
 h4{
@@ -376,10 +382,6 @@ hr{
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-
-
-
 /* General Styles */
 header {
   display: flex;
@@ -505,7 +507,7 @@ header {
   }
   .section-1{
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
   }
   .foot-details-div{
     width: 100%;
@@ -525,10 +527,10 @@ header {
     font-size: 14px;
   }
   .email-sub-div{
-    width: 400px;
+    width: 80vw;
   }
   .email-subscription .btn{
-    width: 400px;
+    width: 80vw;
   }
   .head {
     display: none; /* Hide default header on mobile */

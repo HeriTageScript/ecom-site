@@ -4,13 +4,13 @@ import brands from './assets/brands.png';
 import groupImg from './assets/group.png';
 import analysis from './assets/analysis.png';
 import Item from './item';
+import {useRef, useState, useEffect} from 'react'
 import casual from './assets/casual.png';
 import gym from './assets/gym.png';
 import formal from './assets/formal.png';
 import party from './assets/party.png';
 import Footer from './footer';
 
-import { useRef } from 'react';
 
 const HomeBody = () => {
   const newArrivalsRef = useRef(null);
@@ -27,6 +27,14 @@ const HomeBody = () => {
       ref.current.scrollBy({ left: 300, behavior: 'smooth' });
     }
   };
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost/shop/api/getProducts.php')
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error('Error fetching products:', error));
+  }, []);
 
   return (
     <>
@@ -63,10 +71,9 @@ const HomeBody = () => {
             ‹
           </button>
           <div ref={newArrivalsRef} className="carousel">
-            <Item />
-            <Item />
-            <Item />
-            <Item />
+            {products.slice(0,4).map((product) => (
+              <Item key={product.id} name={product.name} price={product.price} image={product.image_path} />
+            ))}
           </div>
           <button
             className="carousel-button right"
@@ -89,10 +96,9 @@ const HomeBody = () => {
             ‹
           </button>
           <div ref={topSellingRef} className="carousel">
-            <Item />
-            <Item />
-            <Item />
-            <Item />
+            {products.slice(0,4).map((product) => (
+              <Item key={product.id} name={product.name} price={product.price} image={product.image_path} />
+            ))}
           </div>
           <button
             className="carousel-button right"
@@ -102,6 +108,8 @@ const HomeBody = () => {
           </button>
         </div>
       </div>
+
+      
     </>
   );
 };
