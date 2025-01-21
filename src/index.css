@@ -87,6 +87,7 @@ header h1{
 
 .section-2 h1{
   text-align: center;
+  white-space: nowrap;
   font-size: 4.5vw;
   padding: 70px;
 }
@@ -525,6 +526,7 @@ header {
   }
   .section-2 h1{
     font-size: 8.5vw;
+
   }
   .section-3 h1{
     font-size: 8.5vw;
