@@ -111,10 +111,10 @@ header h1{
 }
 .item-bg{
   background-color: #F0EEED;
-  width: 40vw;
+  width: 36vw;
   height: 40vh;
   max-width: 300px;
-  max-height: 160px;
+  min-height: 300px;
   border-radius: 30px;
 }
 .item-bg img{
@@ -499,6 +499,9 @@ header {
     gap: 5px;
     width: 100%;
     text-align: center;
+  }
+  .item-bg{
+    max-height: 200px;
   }
 
   .search-div {
