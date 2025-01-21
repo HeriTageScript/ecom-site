@@ -60,7 +60,7 @@ const HomeBody = () => {
       <img style={{ width: '100%' }} src={brands} alt="" />
       {/* New Arrivals Section */}
       <div className="section-2">
-        <h1 className="bold" style={{ textAlign: 'center', fontSize: '60px', padding: '70px' }}>
+        <h1 className="bold" >
           NEW ARRIVALS
         </h1>
         <div className="carousel-container">
@@ -85,7 +85,7 @@ const HomeBody = () => {
       </div>
       {/* Top Selling Section */}
       <div className="section-3">
-        <h1 className="bold" style={{ textAlign: 'center', fontSize: '60px', padding: '70px' }}>
+        <h1 className="bold">
           TOP SELLING
         </h1>
         <div className="carousel-container">

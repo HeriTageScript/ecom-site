@@ -85,6 +85,17 @@ header h1{
   
 }
 
+.section-2 h1{
+  text-align: center;
+  font-size: 4.5vw;
+  padding: 70px;
+}
+.section-3 h1{
+  text-align: center;
+  font-size: 4.5vw;
+  padding: 70px;
+}
+
 .cart .cart-item-div:last-child hr{
   display: none;
 }
@@ -512,6 +523,13 @@ header {
     flex-direction: column;
     /* align-items: center; */
   }
+  .section-2 h1{
+    font-size: 6.5vw;
+  }
+  .section-3 h1{
+    font-size: 6.5vw;
+  }
+  
   .foot-details-div{
     width: 100%;
     justify-content: space-between;
