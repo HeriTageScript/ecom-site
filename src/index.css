@@ -81,8 +81,7 @@ header h1{
 .section-1 h1{
   /* min-width: 600px; */
   font-size: 5vw;
-  font-family: "Integral CF Regular";
-  
+  font-family: "Integral CF Regular";  
 }
 
 .section-2 h1{
@@ -502,6 +501,17 @@ header {
     margin-left: 0;
     text-align: center;
     width: 100%;
+  }
+  .section-1 h1{
+    font-size: 8vw;
+    min-width: 300px;
+  }
+  .section-1 p{
+    font-size: 4vw;
+    min-width: 300px;
+  }
+  .analysis{
+    width: 150%;
   }
   .inside-foot{
     flex-direction: column;
