@@ -50,7 +50,7 @@ const HomeBody = () => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <button>SHOP NOW</button>
+          <button style={{whiteSpace:'nowrap'}}>SHOP NOW</button>
           <img className="analysis" src={analysis} alt="" />
         </div>
         <div style={{ display: 'flex', alignItems:'end'}}>
