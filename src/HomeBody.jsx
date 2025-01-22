@@ -30,7 +30,7 @@ const HomeBody = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost/shop/api/getProducts.php')
+    fetch('http://ecom-site.byethost6.com/api/getProducts.php')
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));

@@ -5,7 +5,7 @@ const Item = ({name, price, image}) => {
         <>
             <div> 
                 <div className='item-bg'>
-                    <img src={`http://localhost/shop/${image}`} alt="" />
+                    <img src={`http://ecom-site.byethost6.com/${image}`} alt="" />
                 </div>
                 <div style={{display:"flex", marginTop:'20px', flexDirection:'column', gap:'10px'}}>
                     <h2>{name}</h2>
