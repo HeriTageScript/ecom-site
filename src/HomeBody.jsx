@@ -5,6 +5,7 @@ import groupImg from './assets/group.png';
 import analysis from './assets/analysis.png';
 import Item from './item';
 import {useRef, useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import casual from './assets/casual.png';
 import gym from './assets/gym.png';
 import formal from './assets/formal.png';
@@ -28,9 +29,8 @@ const HomeBody = () => {
     }
   };
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
-    fetch('http://ecom-site.byethost6.com/api/getProducts.php')
+    fetch('http://localhost/shop/api/getProducts.php')
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));
@@ -50,7 +50,7 @@ const HomeBody = () => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <button style={{whiteSpace:'nowrap'}}>SHOP NOW</button>
+          <Link to = '/shop'><button style={{whiteSpace:'nowrap'}}>SHOP NOW</button></Link>
           <img className="analysis" src={analysis} alt="" />
         </div>
         <div style={{ display: 'flex', alignItems:'end'}}>

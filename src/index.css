@@ -372,6 +372,12 @@ hr{
   justify-content: space-between;
   margin-top: 20px;
 }
+.shop{
+  display: grid;
+  column-gap: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* width: 100%; */
+}
 
 /* Hide buttons on larger screens */
 @media (min-width: 768px) {
