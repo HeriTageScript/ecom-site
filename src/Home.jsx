@@ -1,8 +1,9 @@
 import HomeBody from './HomeBody'
-const Home  = () => {
+const Home  = ({cart, addToCart}) => {
+    console.log(cart)
     return (
         <>
-            <HomeBody/>
+            <HomeBody cart={cart} addToCart ={addToCart}/>
         </>
      );
 }

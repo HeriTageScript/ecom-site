@@ -13,7 +13,7 @@ import party from './assets/party.png';
 import Footer from './footer';
 
 
-const HomeBody = () => {
+const HomeBody = ({cart, addToCart}) => {
   const newArrivalsRef = useRef(null);
   const topSellingRef = useRef(null);
 
@@ -72,7 +72,7 @@ const HomeBody = () => {
           </button>
           <div ref={newArrivalsRef} className="carousel">
             {products.slice(0,4).map((product) => (
-              <Item key={product.id} id= {product.id} name={product.name} price={product.price} image={product.image_path} />
+              <Item cart={cart} addToCart={addToCart} key={product.id} id= {product.id} name={product.name} price={product.price} image={product.image_path} />
             ))}
           </div>
           <button
@@ -97,7 +97,7 @@ const HomeBody = () => {
           </button>
           <div ref={topSellingRef} className="carousel">
             {products.slice(0,4).map((product) => (
-              <Item key={product.id} id={product.id} name={product.name} price={product.price} image={product.image_path} />
+              <Item key={product.id} cart={cart} addToCart={addToCart} id={product.id} name={product.name} price={product.price} image={product.image_path} />
             ))}
           </div>
           <button

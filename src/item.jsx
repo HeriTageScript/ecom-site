@@ -2,13 +2,11 @@ import star from './assets/star-4.5.png';
 import { useState } from 'react';
 import shirt from './assets/shirt-1.png';
 import AddToCart  from './assets/add-to-cart.svg';
-const Item = ({name, price, image, id}) => {
-
-
-    function addToCart() {
-        // setCart((prevCart) => [...prevCart, id]);
-        // console.log(cart);
+const Item = ({cart, addToCart, name, price, image, id}) => {
+    function handleAddToCart(){
+        addToCart(id)
     }
+
     return ( 
         <>
             <div> 
@@ -22,7 +20,7 @@ const Item = ({name, price, image, id}) => {
                     </div>
                     <div style={{display:"flex", justifyContent:'space-between', alignItems:'center'}}>
                         <h4>${price}</h4>
-                        <button onClick={addToCart} style={{backgroundColor:'transparent', border:'none', }}> 
+                        <button onClick={handleAddToCart} style={{backgroundColor:'transparent', border:'none', }}> 
                             <img style={{width:'40px'}} src={AddToCart} alt="" />
                         </button>
                     </div>

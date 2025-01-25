@@ -9,6 +9,12 @@ import Shop from './Shop'
 
 function App() {
   const [cart, setCart] = useState([]);
+
+  const addToCart = (id) => {
+    setCart((prevCart) => [...prevCart, id]);
+    console.log(cart)
+  };
+
   return (
     <Router>
       <>
@@ -16,7 +22,7 @@ function App() {
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701&display=swap" rel="stylesheet"></link>
         <Header/>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home cart={cart} addToCart={addToCart} />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/shop' element={<Shop />} />
 
