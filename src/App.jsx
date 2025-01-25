@@ -8,6 +8,7 @@ import Header from './Header'
 import Shop from './Shop'
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <Router>
       <>

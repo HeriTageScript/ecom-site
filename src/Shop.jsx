@@ -4,7 +4,7 @@ import './index.css'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-      fetch('http://localhost/shop/api/getProducts.php')
+      fetch('https://php-for-ecom-site.onrender.com/public/api/getProducts.php')
         .then((response) => response.json())
         .then((data) => setProducts(data))
         .catch((error) => console.error('Error fetching products:', error));
@@ -12,9 +12,9 @@ const Shop = () => {
     return ( 
         <>
             <div className="shop">
-            {products.map((product) => ( <Item key={product.id} name={product.name} price={product.price} image={product.image_path} /> ))}
-            {products.map((product) => ( <Item key={product.id} name={product.name} price={product.price} image={product.image_path} /> ))}
-            {products.map((product) => ( <Item key={product.id} name={product.name} price={product.price} image={product.image_path} /> ))}
+            {products.map((product) => ( <Item key={product.id} id={product.id} name={product.name} price={product.price} image={product.image_path} /> ))}
+            {products.map((product) => ( <Item key={product.id} id={product.id} name={product.name} price={product.price} image={product.image_path} /> ))}
+            {products.map((product) => ( <Item key={product.id} id={product.id} name={product.name} price={product.price} image={product.image_path} /> ))}
                 {!products && <h1>No product found</h1>}
             </div>
         </>

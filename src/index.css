@@ -374,8 +374,11 @@ hr{
 }
 .shop{
   display: grid;
-  column-gap: 90px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content:space-between ;
+  padding:0 4% 0 4%;
+  /* column-gap: 90px; */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap : 20px;
   /* width: 100%; */
 }
 
