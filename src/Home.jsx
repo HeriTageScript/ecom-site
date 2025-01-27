@@ -1,11 +1,15 @@
-import HomeBody from './HomeBody'
-const Home  = ({cart, addToCart}) => {
-    console.log(cart)
-    return (
-        <>
-            <HomeBody cart={cart} addToCart ={addToCart}/>
-        </>
-     );
+import HomeBody from './HomeBody';
+import { useState } from 'react';
+const Home = ({cart, addToCart}) => {
+  
+  return (
+    <>
+      <HomeBody 
+        cart={cart}
+        addToCart={addToCart}
+      />
+    </>
+  );
 }
- 
+
 export default Home;

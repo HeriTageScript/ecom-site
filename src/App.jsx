@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Cart from './cart'
@@ -10,11 +9,18 @@ import Shop from './Shop'
 function App() {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (id) => {
-    setCart((prevCart) => [...prevCart, id]);
-    console.log(cart)
+  const addToCart = (id, name, price, image) => {
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === id);
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === id ? { ...item, qty: item.qty + 1 } : item
+        );
+      } else {
+        return [...prevCart, { id, name, price, image, qty: 1 }];
+      }
+    });
   };
-
   return (
     <Router>
       <>
@@ -23,8 +29,8 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home cart={cart} addToCart={addToCart} />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/shop' element={<Shop />} />
+          <Route path='/cart' element={<Cart cart={cart} addToCart={addToCart} />} />
+          <Route path='/shop' element={<Shop cart={cart} addToCart={addToCart}/>} />
 
         </Routes>
         <Footer />

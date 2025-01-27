@@ -1,21 +1,24 @@
 import './index.css';
-import Testimony from './testimony';
 import brands from './assets/brands.png';
 import groupImg from './assets/group.png';
 import analysis from './assets/analysis.png';
 import Item from './item';
-import {useRef, useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
-import casual from './assets/casual.png';
-import gym from './assets/gym.png';
-import formal from './assets/formal.png';
-import party from './assets/party.png';
-import Footer from './footer';
-
+import { useState, useEffect, useRef } from 'react';
 
 const HomeBody = ({cart, addToCart}) => {
+  const [products, setProducts] = useState([]);
   const newArrivalsRef = useRef(null);
   const topSellingRef = useRef(null);
+  useEffect(() => {
+    console.log("Cart updated:", cart);
+  }, [cart]);
+
+  useEffect(() => {
+    fetch('https://php-for-ecom-site.onrender.com/public/api/getProducts.php')
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error('Error fetching products:', error));
+  }, []);
 
   const scrollLeft = (ref) => {
     if (ref.current) {
@@ -28,13 +31,6 @@ const HomeBody = ({cart, addToCart}) => {
       ref.current.scrollBy({ left: 300, behavior: 'smooth' });
     }
   };
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch('https://php-for-ecom-site.onrender.com/public/api/getProducts.php')
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error('Error fetching products:', error));
-  }, []);
 
   return (
     <>
@@ -50,66 +46,65 @@ const HomeBody = ({cart, addToCart}) => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <Link to = '/shop'><button style={{whiteSpace:'nowrap'}}>SHOP NOW</button></Link>
+          <button>SHOP NOW</button>
           <img className="analysis" src={analysis} alt="" />
         </div>
-        <div style={{ display: 'flex', alignItems:'end'}}>
-            <img className="group-img" src={groupImg} alt="" />
+        <div className="group-img-container">
+          <img className="group-img" src={groupImg} alt="" />
         </div>
       </div>
-      <img style={{ width: '100%' }} src={brands} alt="" />
+      <img className="brands-img" src={brands} alt="" />
       {/* New Arrivals Section */}
       <div className="section-2">
-        <h1 className="bold" >
-          NEW ARRIVALS
-        </h1>
+        <h1 className="bold">NEW ARRIVALS</h1>
         <div className="carousel-container">
-          <button
-            className="carousel-button left"
-            onClick={() => scrollLeft(newArrivalsRef)}
-          >
-            ‹
+          <button className="carousel-button left" onClick={() => scrollLeft(newArrivalsRef)}>
+            &lt;
           </button>
-          <div ref={newArrivalsRef} className="carousel">
-            {products.slice(0,4).map((product) => (
-              <Item cart={cart} addToCart={addToCart} key={product.id} id= {product.id} name={product.name} price={product.price} image={product.image_path} />
+          <div className="carousel" ref={newArrivalsRef}>
+            {products.slice(0, 4).map((product) => (
+              <Item
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                image={product.image_path}
+                cart={cart}
+                addToCart={addToCart}
+              />
             ))}
           </div>
-          <button
-            className="carousel-button right"
-            onClick={() => scrollRight(newArrivalsRef)}
-          >
-            ›
+          <button className="carousel-button right" onClick={() => scrollRight(newArrivalsRef)}>
+            &gt;
           </button>
         </div>
       </div>
       {/* Top Selling Section */}
       <div className="section-3">
-        <h1 className="bold">
+        <h1 className="bold" style={{ textAlign: 'center', fontSize: '60px', padding: '70px' }}>
           TOP SELLING
         </h1>
         <div className="carousel-container">
-          <button
-            className="carousel-button left"
-            onClick={() => scrollLeft(topSellingRef)}
-          >
-            ‹
+          <button className="carousel-button left" onClick={() => scrollLeft(topSellingRef)}>
+            &lt;
           </button>
-          <div ref={topSellingRef} className="carousel">
-            {products.slice(0,4).map((product) => (
-              <Item key={product.id} cart={cart} addToCart={addToCart} id={product.id} name={product.name} price={product.price} image={product.image_path} />
+          <div className="carousel" ref={topSellingRef}>
+            {products.slice(0, 4).map((product) => (
+              <Item
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                image={product.image_path}
+                cart={cart}
+                addToCart={addToCart}
+              />
             ))}
           </div>
-          <button
-            className="carousel-button right"
-            onClick={() => scrollRight(topSellingRef)}
-          >
-            ›
+          <button className="carousel-button right" onClick={() => scrollRight(topSellingRef)}>
           </button>
         </div>
       </div>
-
-      
     </>
   );
 };

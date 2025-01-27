@@ -2,18 +2,18 @@ import Header from "./Header";
 import Footer from "./footer";
 import CartItem from './CartItem'
 import './index.css'
-const Cart = () => {
+const Cart = ({cart, addToCart}) => {
     let subTotal = 0
     let deliveryFee = 15
     let total = subTotal + deliveryFee
+    console.log(cart)
+
     return ( 
         <>
             <h1 className="bold" style={{marginLeft:'80px'}} > YOUR CART</h1>
             <div className="cart-container">
                 <div className="cart">
-                    <CartItem />
-                    <CartItem />
-                    <CartItem />
+                    {cart.map((item) => (<CartItem key={item.id} name={item.name} price={item.price} id={item.id} image={item.image} qty={item.qty} addToCart={addToCart} />))}
                 </div>
                 <div className="order-summary">
                     <h2>Order Summary</h2>
