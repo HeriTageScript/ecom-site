@@ -129,7 +129,7 @@ header h1{
   width: 36vw;
   height: 40vh;
   max-width: 300px;
-  min-height: 300px;
+  /* min-height: 300px; */
   border-radius: 30px;
 }
 .item-bg img{
@@ -259,7 +259,7 @@ h4{
 /* Carousel button styles */
 .carousel-button {
   position: absolute;
-  top: 40%;
+  top: 33%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;

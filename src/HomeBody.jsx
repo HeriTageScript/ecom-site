@@ -46,7 +46,7 @@ const HomeBody = ({cart, addToCart}) => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
-          <button>SHOP NOW</button>
+          <button style={{whiteSpace:'nowrap'}}>SHOP NOW</button>
           <img className="analysis" src={analysis} alt="" />
         </div>
         <div className="group-img-container">
@@ -102,6 +102,7 @@ const HomeBody = ({cart, addToCart}) => {
             ))}
           </div>
           <button className="carousel-button right" onClick={() => scrollRight(topSellingRef)}>
+          &gt;
           </button>
         </div>
       </div>
