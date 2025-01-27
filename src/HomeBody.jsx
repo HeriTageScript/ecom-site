@@ -81,7 +81,7 @@ const HomeBody = ({cart, addToCart}) => {
       </div>
       {/* Top Selling Section */}
       <div className="section-3">
-        <h1 className="bold" style={{ textAlign: 'center', fontSize: '60px', padding: '70px' }}>
+        <h1 className="bold">
           TOP SELLING
         </h1>
         <div className="carousel-container">
