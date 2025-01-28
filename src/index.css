@@ -321,7 +321,9 @@ h4{
   border-radius: 20px;
   padding: 20px;
   width: 55%;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 .cart-item{
@@ -603,7 +605,7 @@ header {
     margin-right: 80px;
   }
   .shop{
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 
 }
