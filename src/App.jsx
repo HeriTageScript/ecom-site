@@ -21,6 +21,25 @@ function App() {
       }
     });
   };
+  function deleteFromCart(id) {
+    let newCart = cart.filter(item => item.id !== id)
+    setCart(newCart)
+    console.log(newCart)
+  }
+  function  reduceQty(id){
+    cart.filter(item => item.id === id)
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === id);
+      if (existingItem.qty > 1) {
+        return prevCart.map((item) =>
+          item.id === id ? { ...item, qty: item.qty - 1 } : item
+        );
+      } else {
+        return prevCart.filter((item) => item.id !== id);
+      }
+    });
+  }
+
   return (
     <Router>
       <>
@@ -29,7 +48,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home cart={cart} addToCart={addToCart} />} />
-          <Route path='/cart' element={<Cart cart={cart} addToCart={addToCart} />} />
+          <Route path='/cart' element={<Cart cart={cart} addToCart={addToCart} deleteFromCart={deleteFromCart} reduceQty={reduceQty} />} />
           <Route path='/shop' element={<Shop cart={cart} addToCart={addToCart}/>} />
 
         </Routes>

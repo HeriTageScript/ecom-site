@@ -1,12 +1,17 @@
 import shirt from  './assets/shirt-1.png'
 import deleteCart from './assets/delete.png'
 import './index.css'
-const CartItem = ({name, price, id, image, qty, addToCart}) => {
+import {useState} from 'react'
+const CartItem = ({name, price, id, image, qty, cart, addToCart, reduceQty, deleteFromCart}) => {
     function handleAddToCart() {
         addToCart(id, name, price, image)
     }    
-    function deleteFromCart() {
-        addToCart(id, name, price, image)
+
+    function handleDeleteFromCart() {
+        deleteFromCart(id)
+    }    
+    function handleReduceQty() {
+        reduceQty(id)
     }
     return ( 
         <div className='cart-item-div' style={{width:'fit-content', display:'flex', flexDirection:'column',gap:'20px'}}>
@@ -21,9 +26,9 @@ const CartItem = ({name, price, id, image, qty, addToCart}) => {
                     <h2>${price}</h2>
                 </div>
                 <div className='itemNumberDiv'>
-                    <img src={deleteCart} alt="" />
+                    <img onClick={handleDeleteFromCart} src={deleteCart} alt="" />
                     <div className='itemNumber'>
-                        <button>-</button>
+                        <button onClick={handleReduceQty}>-</button>
                         <p>{qty}</p>
                         <button onClick={handleAddToCart}>+</button>
                     </div>
