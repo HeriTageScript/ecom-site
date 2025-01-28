@@ -381,8 +381,8 @@ hr{
   justify-content:space-between ;
   padding:0 4% 0 4%;
   /* column-gap: 90px; */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap : 20px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap : 50px;
   /* width: 100%; */
 }
 
@@ -601,6 +601,9 @@ header {
   .cart{
     width: 100%;
     margin-right: 80px;
+  }
+  .shop{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
 }

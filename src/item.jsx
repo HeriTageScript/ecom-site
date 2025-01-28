@@ -7,7 +7,7 @@ const Item = ({ id, name, price, image, addToCart }) => {
   };
 
   return (
-    <div>
+    <div style={{width:'fit-content'}}>
       <div className='item-bg'>
         <img src={`https://php-for-ecom-site.onrender.com/public/${image}`} alt={name} />
       </div>

@@ -4,6 +4,7 @@ import groupImg from './assets/group.png';
 import analysis from './assets/analysis.png';
 import Item from './item';
 import { useState, useEffect, useRef } from 'react';
+import {Link} from 'react-router-dom';
 
 const HomeBody = ({cart, addToCart}) => {
   const [products, setProducts] = useState([]);
@@ -46,7 +47,9 @@ const HomeBody = ({cart, addToCart}) => {
             designed to bring out your individuality and cater to your sense of
             style.
           </p>
+          <Link to='/shop'>
           <button style={{whiteSpace:'nowrap'}}>SHOP NOW</button>
+          </Link>
           <img className="analysis" src={analysis} alt="" />
         </div>
         <div className="group-img-container">

@@ -2,6 +2,12 @@ import shirt from  './assets/shirt-1.png'
 import deleteCart from './assets/delete.png'
 import './index.css'
 const CartItem = ({name, price, id, image, qty, addToCart}) => {
+    function handleAddToCart() {
+        addToCart(id, name, price, image)
+    }    
+    function deleteFromCart() {
+        addToCart(id, name, price, image)
+    }
     return ( 
         <div className='cart-item-div' style={{width:'fit-content', display:'flex', flexDirection:'column',gap:'20px'}}>
             <div className ="cart-item">
@@ -19,7 +25,7 @@ const CartItem = ({name, price, id, image, qty, addToCart}) => {
                     <div className='itemNumber'>
                         <button>-</button>
                         <p>{qty}</p>
-                        <button>+</button>
+                        <button onClick={handleAddToCart}>+</button>
                     </div>
                 </div>
             </div>
