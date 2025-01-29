@@ -14,11 +14,18 @@ const Header = () => {
   return (
     <header>
       {/* Mobile Menu Button */}
-      <button className="menu-btn" onClick={toggleSidebar}>
-        ☰
-      </button>
-      <Link className='second-logo' to='/'><h1 >SHOP.CO</h1></Link>
+      <div className="mobile-head">
+        <button className="menu-btn" onClick={toggleSidebar}>
+          ☰
+        </button>
+        <Link className='second-logo' to='/'><h1 >SHOP.CO</h1></Link>
+        <div className="second-header-icons">
+            <Link to='/cart'><img src={shoppingCart} alt="Shopping Cart" /></Link>
+            <img src={profile} alt="Profile" />
+        </div>
 
+      </div>
+      
 
       {/* Sidebar */}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>

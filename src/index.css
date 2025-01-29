@@ -431,7 +431,20 @@ header {
 
 .header-icons {
   display: flex;
+  align-items: center;
   gap: 10px;
+}
+.second-header-icons{
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+.mobile-head{
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  justify-content: space-between;
+  width: 100%;
 }
 
 .search-div {
@@ -524,6 +537,11 @@ header {
   .section-1 p{
     font-size: 4vw;
     min-width: 300px;
+  }
+  .second-header-icons{
+      display: flex;
+      gap: 10px;
+    
   }
   .analysis{
     width: 150%;
