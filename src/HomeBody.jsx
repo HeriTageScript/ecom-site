@@ -5,6 +5,7 @@ import analysis from './assets/analysis.png';
 import Item from './item';
 import { useState, useEffect, useRef } from 'react';
 import {Link} from 'react-router-dom';
+import Testimony from './testimony';
 
 const HomeBody = ({cart, addToCart}) => {
   const [products, setProducts] = useState([]);
@@ -108,6 +109,16 @@ const HomeBody = ({cart, addToCart}) => {
           &gt;
           </button>
         </div>
+      </div>
+      <div className="section-5">
+        <h1 className='bold' style={{textAlign:'center', fontSize:'3vw', marginBottom:'20px'}}>OUR HAPPY CUSTOMERS</h1>
+        <div className="testimony-div">
+          <Testimony />
+          <Testimony />
+          <Testimony />
+        </div>
+
+
       </div>
     </>
   );
