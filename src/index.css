@@ -445,7 +445,6 @@ header {
   align-items: baseline;
   /* justify-content: center; */
   justify-content: space-between;
-  width: 100%;
 }
 
 .search-div {
@@ -531,6 +530,9 @@ header {
     text-align: center;
     width: 100%;
   }
+  .mobile-head{
+    width: 100%;
+  }
   .section-1 h1{
     font-size: 8vw;
     min-width: 300px;
@@ -556,6 +558,7 @@ header {
     width: 100%;
     text-align: center;
   }
+ 
   .item-bg{
     max-height: 200px;
   }
@@ -622,6 +625,10 @@ header {
   .cart{
     width: 100%;
     margin-right: 80px;
+  }
+  .order-summary{
+    width: 100%;
+    /* margin-top: 20px; */
   }
   .shop{
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
