@@ -1,6 +1,6 @@
 import star from './assets/star-4.5.png';
 import AddToCart from './assets/add-to-cart.svg';
-
+import {Link} from 'react-router-dom';
 const Item = ({ id, name, price, image, addToCart }) => {
   const handleAddToCart = () => {
     addToCart(id, name, price, image);
@@ -9,7 +9,7 @@ const Item = ({ id, name, price, image, addToCart }) => {
   return (
     <div style={{width:'fit-content'}}>
       <div className='item-bg'>
-        <img src={`https://php-for-ecom-site.onrender.com/public/${image}`} alt={name} />
+        <Link to={'/Product/'+id}><img src={`https://php-for-ecom-site.onrender.com/public/${image}`} alt={name} /></Link>
       </div>
       <div style={{ display: "flex", marginTop: '20px', flexDirection: 'column', gap: '10px' }}>
         <h2>{name}</h2>
