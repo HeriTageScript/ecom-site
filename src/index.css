@@ -441,7 +441,7 @@ header {
 }
 .mobile-head{
   display: flex;
-  /* align-items: center; */
+  align-items: baseline;
   /* justify-content: center; */
   justify-content: space-between;
   width: 100%;
