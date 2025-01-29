@@ -313,7 +313,8 @@ h4{
   display: flex;
   gap: 20px;
   margin-top: 50px;
-  margin-left: 80px;
+  margin-left: 5%;
+  margin-right: 5%;
   /* justify-content: center;  */
 }
 .cart{
