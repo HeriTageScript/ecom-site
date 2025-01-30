@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import shoppingCart from './assets/shoppingCart.png';
-import profile from './assets/profile.png';
-import search from './assets/search.png';
+import shoppingCart from './assets/shoppingCart.svg';
+import profile from './assets/profile.svg';
+import search from './assets/search.svg';
 import './index.css';
 import {Link} from 'react-router-dom'
 const Header = () => {

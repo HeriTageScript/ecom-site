@@ -1,5 +1,5 @@
-import starFive from './assets/star-5.png';
-import verified from './assets/verified.png';
+import starFive from './assets/star-5.svg';
+import verified from './assets/verified.svg';
 const Testimony = () => {
     return (
         <div className="testimonial">

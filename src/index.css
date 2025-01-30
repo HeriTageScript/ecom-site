@@ -202,16 +202,16 @@ h4{
   padding: 30px 30px 40px 30px;
 }
 .testimonial img{
-  width: 180px;
+  width: 120px;
   height: auto;
 }
 .testimonial h3{
-  font-size: 30px;
+  font-size: 25px;
   color: #000;
 }
 
 .testimonial p{
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   color: rgba(0, 0, 0, 0.6);
 }
 .email-subscription{
@@ -625,7 +625,7 @@ header {
     width: 80%;
   }
   .testimonial p{
-    font-size: 17px;
+    font-size: 10px;
     /* color: rgba(0, 0, 0, 0.6); */
   }
   .section-3 h1{

@@ -1,8 +1,8 @@
 import email from './assets/email.png';
-import twitter from './assets/twitter.png';
-import facebook from './assets/facebook.png';
-import insta from './assets/insta.png';
-import github from './assets/github.png';
+import twitter from './assets/twitter.svg';
+import facebook from './assets/facebook.svg';
+import insta from './assets/insta.svg';
+import github from './assets/github.svg';
 import visa from './assets/visa.png';
 import{Link} from 'react-router-dom'
 import mastercard from './assets/mastercard.png';
