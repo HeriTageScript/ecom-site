@@ -83,8 +83,10 @@ const HomeBody = ({cart, addToCart}) => {
           </button>
         </div>
       </div>
+      
       {/* Top Selling Section */}
       <div className="section-3">
+      <hr />
         <h1 className="bold">
           TOP SELLING
         </h1>
@@ -111,7 +113,7 @@ const HomeBody = ({cart, addToCart}) => {
         </div>
       </div>
       <div className="section-5">
-        <h1 className='bold' style={{textAlign:'center', fontSize:'3vw', marginBottom:'20px'}}>OUR HAPPY CUSTOMERS</h1>
+        <h1 className='bold' >OUR HAPPY CUSTOMERS</h1>
         <div className="testimony-div">
           <Testimony />
           <Testimony />

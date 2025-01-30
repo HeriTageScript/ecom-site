@@ -16,7 +16,7 @@ header h1{
   display: flex;
   gap: 50px;
   align-items: center;
-  padding-top: 70px; 
+  padding-top: 40px; 
   padding-bottom: 15px; 
 }
 .head a{
@@ -87,13 +87,29 @@ header h1{
 .section-2 h1{
   text-align: center;
   white-space: nowrap;
-  font-size: 4.5vw;
-  padding: 70px;
+  font-size: 3.5vw;
+  padding: 40px;
+}
+.section-3{
+  margin: 20px;
+}
+.section-3 hr{
+  /* border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 1px; */
+  width: 90%;
+  margin: auto;
 }
 .section-3 h1{
   text-align: center;
-  font-size: 4.5vw;
-  padding: 70px;
+  font-size: 3.5vw;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section-5 h1{
+  text-align: center;
+  font-size: 3.5vw;
+  margin-bottom: 20px;
 }
 
 .cart .cart-item-div:last-child hr{
@@ -126,14 +142,16 @@ header h1{
 }
 .item-bg{
   background-color: #F0EEED;
-  width: 36vw;
-  height: 40vh;
-  max-width: 300px;
+  width: 18vw;
+  height: 36vh;
+  display: flex;
+  justify-content: center;
+  min-width: 250px;
   /* min-height: 300px; */
   border-radius: 30px;
 }
 .item-bg img{
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   border-radius: 30px;
 }
@@ -159,6 +177,7 @@ h4{
 }
 .section-5{
   margin-top: 30px;
+  padding-bottom: 20px ;
 }
 .testimony-div{
   display: flex;
@@ -168,6 +187,7 @@ h4{
   /* flex-direction: column; */
   /* justify-content: space-between; */
 }
+
 .testimonial{
   display: flex;
   flex-direction: column;
@@ -188,7 +208,7 @@ h4{
 }
 
 .testimonial p{
-  font-size: 22px;
+  font-size: 1.3vw;
   color: rgba(0, 0, 0, 0.6);
 }
 .email-subscription{
@@ -261,6 +281,7 @@ h4{
 
 .carousel {
   display: flex;
+  justify-content: center;
   gap: 20px;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -575,7 +596,7 @@ header {
   }
  
   .item-bg{
-    max-height: 200px;
+    /* max-height: 200px; */
   }
 
   .search-div {
@@ -597,8 +618,18 @@ header {
   .testimonial{
     width: 80%;
   }
+  .testimonial p{
+    font-size: 17px;
+    /* color: rgba(0, 0, 0, 0.6); */
+  }
   .section-3 h1{
     font-size: 8.5vw;
+  }
+  .section-5 h1{
+    font-size: 8.5vw;
+  }
+  .carousel-button{
+    display: none;
   }
   
   .foot-details-div{
@@ -607,6 +638,7 @@ header {
   }
   .carousel {
     gap: 10px;
+    justify-content: start;
   }
   .email-subscription{
     /* align-items: center; */
