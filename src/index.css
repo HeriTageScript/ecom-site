@@ -274,7 +274,7 @@ h4{
   font-size: clamp(10px, 1rem, 1.2rem);
 }
 .foot h2{
-  font-size: clamp(20px, 2rem);
+  font-size: clamp(18px, 2vw, 20px);
   font-weight: 500;
   margin-bottom: 20px;
 }
