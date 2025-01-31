@@ -12,15 +12,17 @@ import googlePay from './assets/google-pay.png';
 const Footer = () => {
     return ( 
         <div className='foot'>
-            <div className="email-subscription">
-                <h1 className='bold' style={{color:"#fff", fontSize:"40px", maxWidth:"700px"}}>STAY UP TO DATE ABOUT  OUR LATEST OFFERS</h1>
-                <form action="">
-                    <div className='email-sub-div' >
-                        <img src={email} alt="" />
-                        <input className='email-input' type="email" placeholder="Enter your email address" />
-                    </div>
-                    <input className='btn' type="button" value="Subscribe to Newletter" />
-                </form>
+            <div className="stud">
+                <div className="email-subscription">
+                    <h1 className='bold' style={{color:"#fff", fontSize:"40px", maxWidth:"700px"}}>STAY UP TO DATE ABOUT  OUR LATEST OFFERS</h1>
+                    <form action="">
+                        <div className='email-sub-div' >
+                            <img src={email} alt="" />
+                            <input className='email-input' type="email" placeholder="Enter your email address" />
+                        </div>
+                        <input className='btn' type="button" value="Subscribe to Newletter" />
+                    </form>
+                </div>
             </div>
             <div className='inside-foot' >
                 <div>
