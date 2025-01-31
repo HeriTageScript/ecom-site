@@ -26,8 +26,8 @@ const Footer = () => {
             </div>
             <div className='inside-foot' >
                 <div>
-                    <h1 className='bold' style={{fontSize:"50px"}}>SHOP.CO</h1>
-                    <p style={{maxWidth:"45%", marginTop:"20px", color:"rgb(0, 0, 0, 0.6)"}}>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                    <h1 className='bold footer-logo'>SHOP.CO</h1>
+                    <p className='footer-logo-text'>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
                     <div style={{display:"flex", gap:"10px", marginTop:"20px"}}>
                         <img src={twitter} alt="" />
                         <img src={facebook} alt="" />

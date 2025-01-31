@@ -182,6 +182,15 @@ h4{
   margin-top: 30px;
   padding-bottom: 20px ;
 }
+.footer-logo{
+  font-size: clamp(30px, 3vw, 50px);
+}
+.footer-logo-text{
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  font-size: 15px;
+  max-width: 45%;
+}
 .testimony-div{
   display: flex;
   justify-content: center;
@@ -262,9 +271,10 @@ h4{
 .foot a{
   text-decoration: none;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 1.2rem;
+  font-size: clamp(10px, 1rem, 1.2rem);
 }
 .foot h2{
+  font-size: clamp(20px, 2rem);
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -334,6 +344,9 @@ h4{
   width:50%;  
   gap: 20%;
   /* justify-content:space-between; */
+}
+.foot-details-div{
+
 }
 .itemNumber{
   display: flex;
@@ -618,6 +631,9 @@ header {
     height: 200px;
     width: 150px;
     /* max-height: 200px; */
+  }
+  .footer-logo-text{
+    max-width: 100%;
   }
 
   .search-div {
