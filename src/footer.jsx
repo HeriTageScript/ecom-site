@@ -3,12 +3,12 @@ import twitter from './assets/twitter.svg';
 import facebook from './assets/facebook.svg';
 import insta from './assets/insta.svg';
 import github from './assets/github.svg';
-import visa from './assets/visa.png';
+import visa from './assets/visa.svg';
 import{Link} from 'react-router-dom'
-import mastercard from './assets/mastercard.png';
-import paypal from './assets/paypal.png';
-import applePay from './assets/apple-pay.png';
-import googlePay from './assets/google-pay.png';
+import mastercard from './assets/mastercard.svg';
+import paypal from './assets/paypal.svg';
+import applePay from './assets/apple-pay.svg';
+import googlePay from './assets/google-pay.svg';
 const Footer = () => {
     return ( 
         <div className='foot'>
