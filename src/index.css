@@ -149,7 +149,7 @@ header h1{
   height: 36vh;
   display: flex;
   justify-content: center;
-  min-width: 200px;
+  min-width: 170px;
   /* min-height: 300px; */
   border-radius: 20px;
 }
@@ -629,7 +629,7 @@ header {
  
   .item-bg{
     height: 200px;
-    width: 150px;
+    width: 100px;
     /* max-height: 200px; */
   }
   .footer-logo-text{
@@ -726,7 +726,8 @@ header {
     /* margin-top: 20px; */
   }
   .shop{
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
   }
 
 }
