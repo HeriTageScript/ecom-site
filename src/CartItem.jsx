@@ -19,20 +19,28 @@ const CartItem = ({name, price, id, image, qty, cart, addToCart, reduceQty, dele
                 <div className='cart-shirt-div' style={{}}>
                     <img className='cart-shirt' src={`https://php-for-ecom-site.onrender.com/public/${image}`} alt="" />
                 </div>
-                <div>
-                    <h3>{name}</h3>
-                    <p>Size: Large</p>
-                    <p>Color: White</p>
-                    <h2>${price}</h2>
-                </div>
-                <div className='itemNumberDiv'>
-                    <img onClick={handleDeleteFromCart} src={deleteCart} alt="" />
-                    <div className='itemNumber'>
-                        <button onClick={handleReduceQty}>-</button>
-                        <p>{qty}</p>
-                        <button onClick={handleAddToCart}>+</button>
+                <div display='flex' style={{display:'flex', flexDirection:'column'}}>
+                    <div  style={{display:'flex', alignItems:'start', justifyContent:'space-between'}}>
+                        <div>
+                            <h3>{name}</h3>
+                            <p>Size: Large</p>
+                            <p>Color: White</p>
+                        </div>
+                        <img style={{}} onClick={handleDeleteFromCart} src={deleteCart} alt="" />
+                    </div>
+                    <div className='itemNumberDiv'>
+                        {/* <div> */}
+                            <h2>${price}</h2>
+                            <div className='itemNumber'>
+                                <button onClick={handleReduceQty}>-</button>
+                                <p>{qty}</p>
+                                <button onClick={handleAddToCart}>+</button>
+                            {/* </div> */}
+                        </div>
+
                     </div>
                 </div>
+               
             </div>
             
             <hr/>
