@@ -10,7 +10,7 @@ const Cart = ({cart, addToCart, reduceQty, deleteFromCart}) => {
 
     return ( 
         <>
-            <h1 className="bold" style={{marginLeft:'80px'}} > YOUR CART</h1>
+            {/* <h1 className="bold" style={{marginLeft:'80px'}} > YOUR CART</h1> */}
             <div className="cart-container">
                 <div className="cart">
                     {!cart.length && <h1 style={{textAlign:'center'}}>No item in cart yet</h1>}

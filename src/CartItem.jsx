@@ -14,7 +14,7 @@ const CartItem = ({name, price, id, image, qty, cart, addToCart, reduceQty, dele
         reduceQty(id)
     }
     return ( 
-        <div className='cart-item-div' style={{width:'fit-content', display:'flex', flexDirection:'column',gap:'20px'}}>
+        <div className='cart-item-div' style={{ display:'flex', flexDirection:'column',gap:'20px'}}>
             <div className ="cart-item">
                 <div className='cart-shirt-div' style={{}}>
                     <img className='cart-shirt' src={`https://php-for-ecom-site.onrender.com/public/${image}`} alt="" />
