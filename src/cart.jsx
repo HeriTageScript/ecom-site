@@ -1,11 +1,18 @@
 import Header from "./Header";
 import Footer from "./footer";
 import CartItem from './CartItem'
+import { useState } from "react";
 import './index.css'
 const Cart = ({cart, addToCart, reduceQty, deleteFromCart}) => {
-    let subTotal = 0
-    let deliveryFee = 0
-    let total = subTotal + deliveryFee
+    // const[subTotal, SetsubTotal] = useState(0)
+    // const[deliveryFee, setDeliveryFee] = useState(subTotal*0.02)
+    let rawTotal = 0
+    for(let i = 0 ; i < cart.length; i++){
+        rawTotal += (cart[i].price * cart[i].qty) 
+    }
+    let subTotal = rawTotal
+    deliveryFee = subTotal*0.15
+    let total = subTotal + deliveryFee 
     console.log(cart)
 
     return ( 

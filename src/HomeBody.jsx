@@ -4,23 +4,36 @@ import groupImg from './assets/group.png';
 import analysis from './assets/analysis.png';
 import Item from './item';
 import { useState, useEffect, useRef } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Testimony from './testimony';
+import { createClient } from '@supabase/supabase-js';
 
-const HomeBody = ({cart, addToCart}) => {
+const supabaseUrl = 'https://olqbscghqffpgdjazdoo.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9scWJzY2docWZmcGdkamF6ZG9vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA4Mzc1NTYsImV4cCI6MjA1NjQxMzU1Nn0.0Xg9cd4fGSVfEzluTlvHlypmRhEmZ0JVP08l-eYw0og';
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+const HomeBody = ({ cart, addToCart }) => {
   const [products, setProducts] = useState([]);
   const newArrivalsRef = useRef(null);
   const topSellingRef = useRef(null);
+
   useEffect(() => {
     console.log("Cart updated:", cart);
   }, [cart]);
 
   useEffect(() => {
-    fetch('https://php-for-ecom-site.onrender.com/public/api/getProducts.php')
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error('Error fetching products:', error));
+    getProducts();
   }, []);
+
+  async function getProducts() {
+    const { data, error } = await supabase.from("instruments").select();
+    if (error) {
+      console.error('Error fetching products:', error);
+    } else {
+      setProducts(data);
+    }
+  }
+
 
   const scrollLeft = (ref) => {
     if (ref.current) {
@@ -72,7 +85,7 @@ const HomeBody = ({cart, addToCart}) => {
                 id={product.id}
                 name={product.name}
                 price={product.price}
-                image={product.image_path}
+                image={product.image}
                 cart={cart}
                 addToCart={addToCart}
               />
@@ -101,7 +114,7 @@ const HomeBody = ({cart, addToCart}) => {
                 id={product.id}
                 name={product.name}
                 price={product.price}
-                image={product.image_path}
+                image={product.image}
                 cart={cart}
                 addToCart={addToCart}
               />

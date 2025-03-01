@@ -5,7 +5,7 @@ const Item = ({ id, name, price, image, addToCart }) => {
   const handleAddToCart = () => {
     addToCart(id, name, price, image);
   };
-
+  console.log(image)
   return (
     <div style={{width:'fit-content'}}>
       <div className='item-bg'>

@@ -8,6 +8,7 @@ import Shop from './Shop'
 import Product from './Product'
 
 function App() {
+
   const [cart, setCart] = useState([]);
 
   const addToCart = (id, name, price, image) => {
