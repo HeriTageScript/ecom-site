@@ -6,14 +6,9 @@ import Item from './item';
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Testimony from './testimony';
-import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://olqbscghqffpgdjazdoo.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9scWJzY2docWZmcGdkamF6ZG9vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA4Mzc1NTYsImV4cCI6MjA1NjQxMzU1Nn0.0Xg9cd4fGSVfEzluTlvHlypmRhEmZ0JVP08l-eYw0og';
-const supabase = createClient(supabaseUrl, supabaseKey);
 
-const HomeBody = ({ cart, addToCart }) => {
-  const [products, setProducts] = useState([]);
+const HomeBody = ({ cart, addToCart, products }) => {
   const newArrivalsRef = useRef(null);
   const topSellingRef = useRef(null);
 
@@ -21,18 +16,6 @@ const HomeBody = ({ cart, addToCart }) => {
     console.log("Cart updated:", cart);
   }, [cart]);
 
-  useEffect(() => {
-    getProducts();
-  }, []);
-
-  async function getProducts() {
-    const { data, error } = await supabase.from("instruments").select();
-    if (error) {
-      console.error('Error fetching products:', error);
-    } else {
-      setProducts(data);
-    }
-  }
 
 
   const scrollLeft = (ref) => {
