@@ -447,6 +447,21 @@ hr{
   /* width: 100%; */
 }
 
+
+.product-image{
+  background-color: #F0EEED;
+  width: 35vw;
+  height: 85vh;
+  border-radius: 20px;
+}
+.small-image{
+  background-color: #F0EEED;
+  width: 12vw;
+  height: 26.7vh;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
 /* Hide buttons on larger screens */
 @media (min-width: 768px) {
   .carousel-button {
