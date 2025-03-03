@@ -11,7 +11,7 @@ const Cart = ({cart, addToCart, reduceQty, deleteFromCart}) => {
         rawTotal += (cart[i].price * cart[i].qty) 
     }
     let subTotal = rawTotal
-    deliveryFee = subTotal*0.15
+    let deliveryFee = subTotal*0.15
     let total = subTotal + deliveryFee 
     console.log(cart)
 
