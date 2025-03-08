@@ -30,8 +30,8 @@ const CartItem = ({name, price, id, image, qty, cart, addToCart, reduceQty, dele
                     </div>
                     <div className='itemNumberDiv'>
                         {/* <div> */}
-                            <h2>${price}</h2>
-                            <div className='itemNumber'>
+                        <h2>${price}</h2>
+                        <div className='itemNumber'>
                                 <button onClick={handleReduceQty}>-</button>
                                 <p>{qty}</p>
                                 <button onClick={handleAddToCart}>+</button>

@@ -28,6 +28,7 @@ function App() {
       setProducts(data);
     }
   }
+  console.log(products)
 
   const addToCart = (id, name, price, image) => {
     setCart((prevCart) => {
@@ -38,6 +39,19 @@ function App() {
         );
       } else {
         return [...prevCart, { id, name, price, image, qty: 1 }];
+      }
+    });
+  };
+  const addToCartWithQty = (id, name, price, image, qty) => {
+    if (typeof qty !== 'number' || qty <= 0) return;
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === id);
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === id ? { ...item, qty: item.qty + qty } : item
+        );
+      } else {
+        return [...prevCart, { id, name, price, image, qty }];
       }
     });
   };
@@ -69,7 +83,7 @@ function App() {
           <Route path='/' element={<Home cart={cart} addToCart={addToCart} products={products} />} />
           <Route path='/cart' element={<Cart cart={cart} addToCart={addToCart} deleteFromCart={deleteFromCart} reduceQty={reduceQty} />} />
           <Route path='/shop' element={<Shop cart={cart} addToCart={addToCart} />} />
-          <Route path='/product/:id' element={<Product products={products} cart ={cart} addToCart={addToCart} />} />
+          <Route path='/product/:id' element={<Product products={products} cart ={cart} addToCart={addToCartWithQty} />} />
         </Routes>
         <Footer />
       </>

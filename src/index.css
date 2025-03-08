@@ -446,13 +446,23 @@ hr{
   gap : 50px;
   /* width: 100%; */
 }
-
+.product{
+  padding-left: 100px;
+}
+.product-sec-1{
+  /* background-color: aqua; */
+  display: flex;
+  margin-left: 0px;
+}
 
 .product-image{
   background-color: #F0EEED;
   width: 35vw;
   height: 85vh;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .small-image{
   background-color: #F0EEED;
