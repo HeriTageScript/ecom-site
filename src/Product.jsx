@@ -2,6 +2,8 @@ import { useParams} from "react-router-dom";
 import { useRef , useState, useEffect} from "react";
 import Item from "./item";
 import './index.css'
+import star from './assets/star-5.svg'
+import Testimony from './testimony'
 
 const Product = ({products, cart, addToCart}) => {
     let { id } = useParams();
@@ -48,34 +50,38 @@ const Product = ({products, cart, addToCart}) => {
                         </div>  
                     </div>
                 </div>
-                <div>
-                    <h1>{product.name}</h1>
-                    <h1>${product.price}</h1>
-                    <h3>{product.description}</h3>
+                <div style={{width: "100%", display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'space-between', paddingRight:'35px'}}>
+                    <h1 className="bold">{product.name.toUpperCase()}</h1>
+                    <img src={star} alt="" />
+                    <h1 >${product.price}</h1>
+                    <h3  style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>{product.description}</h3>
                     <hr />
-                    <h3>Select Colors</h3>
+                    <h3 style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>Select Colors</h3>
                     <hr />
-                    <h3>Choose Size</h3>
-                    <input type="button" value="Small" />
-                    <input type="button" value="Medium" />
-                    <input type="button" value="Large" />
-                    <input type="button" value="Extra large" />
+                    <h3 style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>Choose Size</h3>
+                    <div className="sizeButtonDiv">
+                        <input className="sizeButton" type="button" value="Small" />
+                        <input className="sizeButton" type="button" value="Medium" />
+                        <input className="sizeButton" type="button" value="Large" />
+                        <input className="sizeButton" type="button" value="X-Large" />
+                    </div>
+
                     <hr />
-                    <div>
-                        <div className='itemNumber'>
-                                <button onClick={handleReduceQty}>-</button>
+                    <div style={{display: "flex", flexDirection: "row", width:"100%", alignItems: "center", gap: "10px"}}>
+                        <div style={{width:'26%'}} className='itemNumber'>
+                                <button style={{justifySelf:'flex-start'}} onClick={handleReduceQty}>-</button>
                                 <p>{qty}</p>
-                                <button onClick={handleSetQty}>+</button>
+                                <button style={{alignSelf:'flex-end'}} onClick={handleSetQty}>+</button>
                         </div>
-                        <div>
-                            <input type="button" value="Add to cart" onClick={handleAddToCart}/>
+                        <div style={{width:'65%'}}  >
+                            <input className="addToCartBtn" type="button" value="Add to cart" onClick={handleAddToCart}/>
                         </div>   
                     </div>
                    
                 </div>
             </div>
             <div className="product-sec-3">
-                <h2 className="bold">YOU MIGHT ALSO LIKE</h2>
+                <h2 style={{textAlign:'center'}} className="bold">YOU MIGHT ALSO LIKE</h2>
                 <div className="carousel-container">
                     <button className="carousel-button left" onClick={() => scrollLeft(mightLikeRef)}>
                         &lt;

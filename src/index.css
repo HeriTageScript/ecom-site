@@ -353,8 +353,8 @@ h4{
   background-color: #f0f0f0;
   width: fit-content;
   gap: 20px;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 14px;
+  border-radius: 27px;
   /* font-size: 2vw; */
 }
 .itemNumber button{
@@ -453,12 +453,13 @@ hr{
   /* background-color: aqua; */
   display: flex;
   margin-left: 0px;
+  gap: 25px;
 }
 
 .product-image{
   background-color: #F0EEED;
-  width: 35vw;
-  height: 85vh;
+  width: 33vw;
+  height: 80vh;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -466,12 +467,37 @@ hr{
 }
 .small-image{
   background-color: #F0EEED;
-  width: 12vw;
-  height: 26.7vh;
+  width: 11vw;
+  height: 25vh;
   border-radius: 20px;
   margin-bottom: 15px;
 }
-
+.addToCartBtn{
+  background-color: #000;
+  color: #fff;
+  gap: 20px;
+  padding: 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  width: 100%;
+}
+.sizeButtonDiv{
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  /* width: 600px; */
+}
+.sizeButton{
+  background-color: #F0F0F0;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 13px 25px 13px 25px;
+  /* margin: 5px; */
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  width: fit-content;
+}
 /* Hide buttons on larger screens */
 @media (min-width: 768px) {
   .carousel-button {
