@@ -40,31 +40,48 @@ const Product = ({products, cart, addToCart}) => {
                     </div>
                     <div>
                         <div className = "product-front small-image">
+                        <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
 
                         </div>
                         <div className = "product-back small-image">
+                        <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
 
                         </div>
-                        <div className = "product-model small-image">
+                        <div style={{margin:'0'}} className = "product-model small-image">
+                        <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
 
                         </div>  
                     </div>
                 </div>
                 <div style={{width: "100%", display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'space-between', paddingRight:'35px'}}>
-                    <h1 className="bold">{product.name.toUpperCase()}</h1>
-                    <img src={star} alt="" />
-                    <h1 >${product.price}</h1>
-                    <h3  style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>{product.description}</h3>
-                    <hr />
-                    <h3 style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>Select Colors</h3>
-                    <hr />
-                    <h3 style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>Choose Size</h3>
-                    <div className="sizeButtonDiv">
-                        <input className="sizeButton" type="button" value="Small" />
-                        <input className="sizeButton" type="button" value="Medium" />
-                        <input className="sizeButton" type="button" value="Large" />
-                        <input className="sizeButton" type="button" value="X-Large" />
+                    <div style={{width: "100%", display:'flex', flexDirection:'column', alignItems:'flex-start', gap:'10px'}}>
+                        <h1 style={{fontSize:'2.7rem'}} className="bold">{product.name.toUpperCase()}</h1>
+                        <img src={star} alt="" />
+                        <h1 >${product.price}</h1>
+                        <h3  style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>{product.description}</h3>
                     </div>
+                    <hr />
+                    <div>
+                        <h3 style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>Select Colors</h3>
+                        <div className="colorButtonDiv">
+                            <input className="colorButton" type="button"  />
+                            <input className="colorButton" type="button"  />
+                            <input className="colorButton" type="button"  />
+                            <input className="colorButton" type="button"  />
+                        </div>                        
+                    </div>
+                    
+                    <hr />
+                    <div>
+                        <h3 style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>Choose Size</h3>
+                        <div className="sizeButtonDiv">
+                            <input className="sizeButton" type="button" value="Small" />
+                            <input className="sizeButton" type="button" value="Medium" />
+                            <input className="sizeButton" type="button" value="Large" />
+                            <input className="sizeButton" type="button" value="X-Large" />
+                        </div>   
+                    </div>
+                   
 
                     <hr />
                     <div style={{display: "flex", flexDirection: "row", width:"100%", alignItems: "center", gap: "10px"}}>
@@ -81,7 +98,7 @@ const Product = ({products, cart, addToCart}) => {
                 </div>
             </div>
             <div className="product-sec-3">
-                <h2 style={{textAlign:'center'}} className="bold">YOU MIGHT ALSO LIKE</h2>
+                <h2 style={{textAlign:'center', fontSize:'2.6rem'}} className="bold">YOU MIGHT ALSO LIKE</h2>
                 <div className="carousel-container">
                     <button className="carousel-button left" onClick={() => scrollLeft(mightLikeRef)}>
                         &lt;

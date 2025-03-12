@@ -465,12 +465,20 @@ hr{
   justify-content: center;
   align-items: center;
 }
+.product-image img{
+  width: 100%;
+  height: 100%;
+}
 .small-image{
   background-color: #F0EEED;
   width: 11vw;
   height: 25vh;
   border-radius: 20px;
   margin-bottom: 15px;
+}
+.small-image img{
+  width: 100%;
+  height: 100%;
 }
 .addToCartBtn{
   background-color: #000;
@@ -497,6 +505,23 @@ hr{
   border-radius: 30px;
   font-size: 15px;
   width: fit-content;
+}
+.colorButtonDiv{
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  /* width: 600px; */
+}
+.colorButtonDiv input{
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: 0;
+}
+.product-sec-1 hr{
+  width: 100%; /* Make it span across the div */
+  border: 1px  #ccc; /* Give it a visible border */
 }
 /* Hide buttons on larger screens */
 @media (min-width: 768px) {
