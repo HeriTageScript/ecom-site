@@ -345,9 +345,7 @@ h4{
   gap: 20%;
   /* justify-content:space-between; */
 }
-.foot-details-div{
 
-}
 .itemNumber{
   display: flex;
   background-color: #f0f0f0;
@@ -447,7 +445,7 @@ hr{
   /* width: 100%; */
 }
 .product{
-  padding-left: 100px;
+  padding-left: 8vw;
 }
 .product-sec-1{
   /* background-color: aqua; */
@@ -459,6 +457,7 @@ hr{
 .product-image{
   background-color: #F0EEED;
   width: 33vw;
+  min-width: 350px;
   height: 80vh;
   border-radius: 20px;
   display: flex;
@@ -472,6 +471,7 @@ hr{
 .small-image{
   background-color: #F0EEED;
   width: 11vw;
+  min-width: 130px;
   height: 25vh;
   border-radius: 20px;
   margin-bottom: 15px;
@@ -541,6 +541,10 @@ hr{
     gap: 20px;
     top: -10.5rem;
 
+  }
+  .product-sec-1{
+    flex-direction: column;
+    gap: 20px;
   }
 
   .stud{
