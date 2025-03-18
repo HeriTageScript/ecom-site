@@ -7,7 +7,7 @@ header h1{
   font-family: "Integral CF Regular";
   font-size: 40px;
   font-weight: 700;
-  margin-left: 100px;
+  margin-left: 2vw;
 }
 .bold{
   font-family: "Integral CF Regular";
@@ -445,7 +445,7 @@ hr{
   /* width: 100%; */
 }
 .product{
-  padding-left: 8vw;
+  padding-left: 2vw;
 }
 .product-sec-1{
   /* background-color: aqua; */

@@ -55,7 +55,7 @@ const Product = ({products, cart, addToCart}) => {
                 </div>
                 <div style={{width: "100%", display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'space-between', paddingRight:'35px'}}>
                     <div style={{width: "100%", display:'flex', flexDirection:'column', alignItems:'flex-start', gap:'10px'}}>
-                        <h1 style={{fontSize:'2.7rem'}} className="bold">{product.name.toUpperCase()}</h1>
+                        <h1 style={{fontSize:'40px'}} className="bold">{product.name.toUpperCase()}</h1>
                         <img src={star} alt="" />
                         <h1 >${product.price}</h1>
                         <h3  style={{color:'rgb(0,0,0,0.6)', fontWeight:'400', fontSize:'16px'}}>{product.description}</h3>
@@ -98,7 +98,7 @@ const Product = ({products, cart, addToCart}) => {
                 </div>
             </div>
             <div className="product-sec-3">
-                <h2 style={{textAlign:'center', fontSize:'2.6rem'}} className="bold">YOU MIGHT ALSO LIKE</h2>
+                <h2 style={{textAlign:'center', fontSize:'2.6rem '}} className="bold">YOU MIGHT ALSO LIKE</h2>
                 <div className="carousel-container">
                     <button className="carousel-button left" onClick={() => scrollLeft(mightLikeRef)}>
                         &lt;
