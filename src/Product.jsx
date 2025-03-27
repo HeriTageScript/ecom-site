@@ -28,9 +28,11 @@ const Product = ({products, cart, addToCart}) => {
       }, [cart]); // This will log whenever `cart` changes
     
     const mightLikeRef = useRef(null);
+    if (!product) {
+        return <div>Loading product details...</div>;
+    }
     return ( 
         <div className="product">
-            {!products && <div>Loading...</div>}
             <div className="product-sec-1">
                 <div style={{display: "flex", flexDirection: "row-reverse", justifyContent:"flex-end", gap: "15px"}}>
                     <div>
@@ -40,16 +42,13 @@ const Product = ({products, cart, addToCart}) => {
                     </div>
                     <div>
                         <div className = "product-front small-image">
-                        <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
-
+                            <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
                         </div>
                         <div className = "product-back small-image">
-                        <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
-
+                            <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
                         </div>
                         <div style={{margin:'0'}} className = "product-model small-image">
-                        <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
-
+                            <img src={`https://php-for-ecom-site.onrender.com/public/${product.image}`} alt="" />
                         </div>  
                     </div>
                 </div>
@@ -98,7 +97,7 @@ const Product = ({products, cart, addToCart}) => {
                 </div>
             </div>
             <div className="product-sec-3">
-                <h2 style={{textAlign:'center', fontSize:'2.6rem '}} className="bold">YOU MIGHT ALSO LIKE</h2>
+                <h1 style={{textAlign:'center', fontSize:'2.6rem '}} className="bold">YOU MIGHT ALSO LIKE</h1>
                 <div className="carousel-container">
                     <button className="carousel-button left" onClick={() => scrollLeft(mightLikeRef)}>
                         &lt;

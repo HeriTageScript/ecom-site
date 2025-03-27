@@ -829,4 +829,7 @@ header {
   .small-image{
     height: 10.5vh;
   }
+  .product h1{
+    font-size: 30px !important;
+  }
 }
